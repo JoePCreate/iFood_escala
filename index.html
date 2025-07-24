@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Escala 12x36 - Mês</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Escala de Trabalho 12x36</h1>
+  <h2>iFood HUB - Riomar Fortaleza</h2>
+  <details class="configuracoes">
+  <summary>⚙️ Configurar nomes da equipe</summary>
+
+  <div class="form-group">
+    <label>Assistente Grupo A: <input type="text" id="assistente1" /></label>
+    <label>Assistente Grupo B: <input type="text" id="assistente2" /></label>
+  </div>
+
+  <div class="form-group">
+    <h4>Mensageiros Grupo A:</h4>
+    <input type="text" id="mA1" placeholder="M1" />
+    <input type="text" id="mA2" placeholder="M2" />
+    <input type="text" id="mA3" placeholder="M3" />
+    <input type="text" id="mA4" placeholder="M4" />
+  </div>
+
+  <div class="form-group">
+    <h4>Mensageiros Grupo B:</h4>
+    <input type="text" id="mB1" placeholder="M5" />
+    <input type="text" id="mB2" placeholder="M6" />
+    <input type="text" id="mB3" placeholder="M7" />
+    <input type="text" id="mB4" placeholder="M8" />
+  </div>
+
+  <button onclick="salvarConfiguracoes()">💾 Salvar Configuração</button>
+</details>
+
+
+  <div class="controls">
+    <label>
+      Mês:
+      <select id="mesSelect">
+        <!-- JS preenche -->
+      </select>
+    </label>
+    <label>
+      Ano:
+      <select id="anoSelect">
+        <!-- JS preenche -->
+      </select>
+    </label>
+    <button onclick="carregarMes()">Atualizar Escala 📅</button>
+    <button onclick="mostrarSemanaAnterior()">⬅️ Semana Anterior</button>
+    <button onclick="mostrarProximaSemana()">Próxima Semana ➡️</button>
+    <button onclick="exportarExcel()">Exportar Excel 📤</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Data</th>
+        <th>Dia</th>
+        <th>Assistente</th>
+        <th>Mensageiros</th>
+        <th>Grupo</th>
+      </tr>
+    </thead>
+    <tbody id="tabelaEscala"></tbody>
+  </table>
+
+  <script src="xlsx.full.min.js"></script> <!-- Lib Excel -->
+  <script src="script.js"></script>
+</body>
+</html>
+

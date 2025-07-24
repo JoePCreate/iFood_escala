@@ -1,0 +1,40 @@
+.configuracoes {
+  background: #fff;
+  padding: 15px;
+  margin: 15px auto;
+  max-width: 600px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.configuracoes summary {
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.form-group input {
+  padding: 8px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.configuracoes button {
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: #0055aa;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
